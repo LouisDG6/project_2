@@ -35,6 +35,8 @@ The user is expecting to see clear images and scroll through them to see all the
 
 -Next challenge was connecting the styles.css to the layout page. I decided to just move forward by adding a styles tag to the layout.liquid page and styling from there. I was missing the app.use(express.static("public")) necessary to connect the public folder and its contents to the server.js
 
+-After switching the index route from app.get to router.get my images stopped displaying
+
 ## List of Technologies
 
 javascript
@@ -44,4 +46,7 @@ imgur.com
 ## Bibiliography
 
 This page assisted me with the creation of the hamburger menu:
+
+https://www.youtube.com/watch?v=1iS0r238G4g&ab_channel=DeltatyCode
+
 https://www.youtube.com/watch?v=dIyVTjJAkLw&ab_channel=codeSTACKr

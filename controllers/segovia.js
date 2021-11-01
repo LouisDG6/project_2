@@ -1,17 +1,16 @@
-//Import Dependencies
-/////////////////////////////
-const mongoose = require("./connection")
-const Segovia = require("./segovia")
+/////////////////////////
+// Import Dependencies
+/////////////////////////
+const express = require("express")
+const Segovia = require("../models/segovia.js")
 
-///////////////////////////////
-// Seed Code
-///////////////////////////////
+//////////////////
+// create router
+//////////////////
+const router = express.Router()
 
-// save the connection in it a variable
-const db = mongoose.connection
-
-// make sure code doesn't run till connection is open
-db.on("open", () => {
+//seed route - seed our starter data
+router.get("/seed", (req, res) => {
    
     const startSegovias = [
         {name: "EMMA WALLET-ON-A-CHAIN",
@@ -51,14 +50,55 @@ db.on("open", () => {
         img: "https://i.imgur.com/ZyTSZsj.png"},
     
     ]
-    
 
     // delete all items
-    Segovia.deleteMany({}).then((data) => {
-        // seed the starter fruits
-        Segovia.create(startSegovias).then((data) => {
-            console.log(data)
-            db.close()
+    Segovia.deleteMany({})
+    .then((data) => {
+        Segovia.create(startSegovias)
+        .then((data) => {
+            res.json(data)
         })
     })
 })
+
+// Index Route - get - /segovia
+router.get("/", (req, res) => {
+    Segovia.find({})
+    .then((segovia) => {
+    res.render("segovia/index.liquid", {segovia})
+    
+})
+})
+
+// Shopping Route
+router.get("/shopping_cart", (req, res) => {
+res.render("segovia/shopping.liquid")
+})
+
+// Create Route
+router.post("/shopping_cart", (req, res) => {
+segovia.push(req.body)
+    res.redirect("/shopping_cart")
+        .catch((error) => {
+        res.json({error})
+    })
+})
+
+// Destroy Route
+router.delete("/shopping_cart/:id", (req, res) => {
+
+const id = req.params.id
+ segovia.splice(id, 1)
+res.redirect("/segovia/shopping_cart")
+})
+
+// Show Route
+router.get("/:id", (req, res) => {
+const id = parseInt(req.params.id)
+res.render("segovia/show.liquid", {segovia})
+.catch((error) => {
+    res.json({error})
+})
+})
+
+module.exports = router

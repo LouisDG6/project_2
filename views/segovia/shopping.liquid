@@ -1,6 +1,8 @@
 {% layout "layout.liquid" %}
 {% block content %}
 <h2>Shopping Cart</h2>
-<br><button><a href="/segovia">Go to Main Page</a></button>
+<form action="/segovia/shopping_cart/{{index}}?_method=DELETE" method=post>
+    <input type="submit" value="REMOVE ITEM">
+    </form>
 
 {% endblock %}
