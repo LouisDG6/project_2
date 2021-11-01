@@ -65,6 +65,7 @@ router.get("/seed", (req, res) => {
 router.get("/", (req, res) => {
     Segovia.find({})
     .then((segovia) => {
+        console.log(segovia)
     res.render("segovia/index.liquid", {segovia})
     
 })
@@ -76,26 +77,60 @@ res.render("segovia/shopping.liquid")
 })
 
 // Create Route
-router.post("/shopping_cart", (req, res) => {
-segovia.push(req.body)
-    res.redirect("/shopping_cart")
+router.post("/", (req, res) => {
+Segovia.create(req.body)
+.then((segovia) => {
+    //redirect to shopping bag
+    res.redirect("/segovia")
+})
         .catch((error) => {
         res.json({error})
     })
 })
 
-// Destroy Route
-router.delete("/shopping_cart/:id", (req, res) => {
+// edit route - get request - /segovia/:id/edit
+router.get("/:id/edit", (req, res) => {
+    const id = req.params.id
+    Segovia.findById(id)
+    .then((segovia) => {
+        res.render("segovia/edit.liquid", { segovia })
+    })
+    .catch((error) => {
+        res.json({error})
+    })
+})
 
-const id = req.params.id
- segovia.splice(id, 1)
-res.redirect("/segovia/shopping_cart")
+// update route - put request - "/segovia/:id"
+router.put("/:id", (req, res) => {
+    const id = req.params.id
+    Segovia.findByIdAndUpdate(id, req.body, {new: true})
+    .then((segovia) => {
+        res.redirect("/segovia")
+    })
+     .catch((error) => {
+        res.json({error})
+    })
+})
+
+// destroy route - delete request - /segovia/:id
+router.delete("/:id", (req, res) => {
+    const id = req.params.id
+    Segovia.findByIdAndRemove(id)
+    .then((segovia) => {
+        res.redirect("/segovia")
+    })
+     .catch((error) => {
+        res.json({error})
+    })
 })
 
 // Show Route
 router.get("/:id", (req, res) => {
-const id = parseInt(req.params.id)
+const id = req.params.id
+Segovia.findById(id)
+.then((segovia) => {
 res.render("segovia/show.liquid", {segovia})
+})
 .catch((error) => {
     res.json({error})
 })

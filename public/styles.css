@@ -73,64 +73,12 @@ nav .mainMenu .closeMenu , .icons i {
 .fa-instagram:hover {
     color: red;
 }
-
-
-/* .menu-btn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-    border: 5px solid salmon;
-    margin: 20px;
-    background: gold;
+.fa-facebook:hover {
+    color: red;
 }
-
-.menu-btn_burger {
-    width: 50px;
-    height: 6px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px pink;
-    transition: all .5s ease-in-out;
+.fa-twitter:hover {
+    color: red;
 }
-
-.menu-btn_burger::before,
-.menu-btn_burger::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 6px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px pink;
-    transition: all .5s ease-in-out;
-}
-
-.menu-btn_burger::before {
-    transform: translateY(-16px);
-}
-
-.menu-btn_burger::after {
-    transform: translateY(16px);
-}
-
-.menu-btn.open .menu-btn_burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-}
-
-.menu-btn.open .menu-btn_burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-}
-
-.menu-btn.open .menu-btn_burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-} */
 
 a {
     color: white;
@@ -191,7 +139,7 @@ a :hover {
 }
 
 @media(max-width: 800px)  {
-    nav .MainMenu {
+    nav .mainMenu {
         height: 100vh;
         position: fixed;
         top: 0;
@@ -201,11 +149,11 @@ a :hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: red;
+        background: salmon;
         transition: top 1s ease;
         display: none;
     }
-    nav .MainMenu .closeMenu {
+    nav .mainMenu .closeMenu {
         display: block;
         position: absolute;
         top: 20px;
@@ -222,5 +170,7 @@ a :hover {
     .icons i {
         display: inline-block;
         padding: 12px;
+        height: 20px;
+        width: 20px;
     }
 }

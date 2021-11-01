@@ -1,0 +1,22 @@
+{% layout "layout.liquid" %}
+{% block content %}
+
+<div>
+
+ <form action="/segovia/{{ segovia._id }}?_method=PUT" method="post">
+  <fieldset>
+    <legend>Edit {{ segovia.name }}</legend>
+        <label>
+            Name: <input type="text" name="name" placeholder="enter bag name" value="{{segovia.name}}"/>
+        </label>
+        <label>
+            Description: <input type="text" name="description" placeholder="enter item description" value="{{segovia.description}}"/>
+        </label>
+    </fieldset>
+    <input type="submit" value="update {{segovia.name}}"/>
+ </form>
+
+</div>
+
+
+{% endblock %}

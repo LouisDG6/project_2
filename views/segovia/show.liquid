@@ -9,14 +9,17 @@
 
 
     <div class="show_page_content">
-        <img class="img_show" src="{{segovia1.img}}"/><br>
-        <h2>{{segovia1.name}}</h2><br>
-        <h3>{{segovia1.description}}</h3>
+        <img class="img_show" src="{{segovia.img}}"/><br>
+        <h2>{{segovia.name}}</h2><br>
+        <h3>{{segovia.description}}</h3>
     </div>
     <div class="shopping">
     <form action="/segovia/shopping_cart"  method="post">
         <input type="submit" value="Add to Shopping Cart">
         </form>
+        <a href="/segovia/{{ segovia._id }}/edit"><button>EDIT</button></a>
+        <form action="/segovia/{{ segovia._id }}?_method=DELETE" method="post">
+        <input type="submit" value="DELETE">
     </div>
 
     
