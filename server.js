@@ -5,6 +5,10 @@ const morgan = require("morgan")
 const methodOverride = require("method-override")
 const path = require("path")
 const SegoviaRouter = require("./controllers/segovia")
+const MongoStore = require("connect-mongo") // save sessions in mongo
+
+const MONGO = process.env.MONGO
+
 // const segovia = require("./models/segovia")
 
 //import liquid
