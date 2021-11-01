@@ -1,0 +1,30 @@
+{% layout "layout.liquid" %}
+
+{% block content %}
+
+<a href="/segovia/shopping_cart"></a>
+
+<div class="links">
+    <div id="show_main_page_link">
+    <br><button ><a href="/segovia">Go to Main Page</a></button>
+    </div>
+
+</div>
+
+    <div class="show_page_content">
+        <img class="img_show" src="{{segovia1.img}}"/><br>
+        <h2>{{segovia1.name}}</h2><br>
+        <h3>{{segovia1.description}}</h3>
+    </div>
+    <div class="shopping">
+    <form action="/segovia/shopping_cart"  method="post">
+        <input type="submit" value="Add to Shopping Cart">
+        </form>
+    </div>
+
+    
+
+
+
+
+{% endblock %}

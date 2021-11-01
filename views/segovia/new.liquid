@@ -1,0 +1,14 @@
+{% layout "layout.liquid" %}
+{% block content %}
+<h1>Shopping Cart</h1>
+       
+
+<form action="/segovia/shopping_cart" method="post">
+Name: <input type="text" name="name" value=""><br>
+ID: <input type="text" name="id"><br>
+Type: <input type="text" name="type"><br>
+Stats: <input type="text" name="stats"><br>
+<input type="submit" value="Register New Pokemon">
+</form>
+
+{% endblock %}

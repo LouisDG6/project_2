@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEGOVIA</title>
+    <!-- Milligram CSS for Some Default Styling -->
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+
+    <!-- CSS Reset -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+
+    <!-- Milligram CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- OUR CSS AND JS -->
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="./fontawesome-free-5.13.0-web/css/all.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="main_top">
+        <!-- <div class="menu-btn">
+            <div class="menu-btn_burger"></div> -->
+        <nav>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <li><a href="/segovia">Home</a></li>
+                <li><a href="#">Bags</a></li>
+                <li><a href="#">Other Items</a></li>
+                <li><a href="#">About</a></li>
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+                <span class="icons">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                </span>
+            </ul>
+        </nav>
+        </div>
+        <h1>SEGOVIA</h1>
+        <div class="shopping_img">
+            <a href="/segovia/shopping_cart"> <img class="shopping_bag" src="https://www.creativefabrica.com/wp-content/uploads/2020/08/12/Bag-Icon-Graphics-4941627-1.jpg"></a>
+        </div>    
+        
+    </div>
+
+   
+
+    <main>{% block content %}My default content{% endblock %}</main>
+
+    <footer></footer>
+  </body>
+</html>
+

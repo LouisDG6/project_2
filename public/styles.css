@@ -1,0 +1,226 @@
+/* All Pages */
+h1 {
+    text-align: center;
+    color: black;
+    background-color: gold;
+    font-weight: bolder;
+}
+h2 {
+    text-align: center;
+    color: black;
+    background-color: brown;
+}
+h3 {
+    color: black;
+    background-color: beige;
+}
+body {
+    background-image: url("https://cdn.shopify.com/s/files/1/0285/1316/products/w0447_1s_Tropical-Flowers-Removable-Peel-and-Stick-Wallpaper_Repeating-Pattern-Sample-1_b2777b3f-e4e6-4d1e-b73a-4f0b2754e2ff.jpg?v=1604091211") ;
+   
+}
+
+.main_top {
+    background-color: gold;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.shopping_bag {
+    width: 10%;
+    margin: 20px 5px 0 90%;
+    
+    
+}
+
+nav {
+    background: gold;
+    color: g;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-transform: uppercase;
+    color: black;
+    font-size: 2rem;
+}
+
+nav .mainMenu li a:hover {
+    background: white;
+}
+
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu , .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.fa-instagram:hover {
+    color: red;
+}
+
+
+/* .menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border: 5px solid salmon;
+    margin: 20px;
+    background: gold;
+}
+
+.menu-btn_burger {
+    width: 50px;
+    height: 6px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px pink;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px pink;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before {
+    transform: translateY(-16px);
+}
+
+.menu-btn_burger::after {
+    transform: translateY(16px);
+}
+
+.menu-btn.open .menu-btn_burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn_burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn_burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+} */
+
+a {
+    color: white;
+}
+a :hover {
+    transition: 2s;
+    color: white;
+}
+/* Index Page */
+#products {
+    color: black;
+}
+#products :hover {
+    transition: 2s;
+    color: red;
+    
+}
+
+.bags {
+    border: 10px solid salmon;
+}
+
+
+#main_shopping {
+    color: black;
+}
+
+.img_carousel {
+    text-align: center;
+    list-style-type: none;
+    
+}
+
+
+.shopping {
+    text-align: center;
+    padding: 0 20%;
+    margin: auto;
+   
+}
+.links {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Show Page */
+#show_main_page_link {
+    display: flex;
+    align-self: flex-start;
+}
+.show_page_content {
+    text-align: center;
+}
+
+.img_show {
+    border: 10px solid salmon;
+}
+
+@media(max-width: 800px)  {
+    nav .MainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: red;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .MainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    nav .openMenu {
+        display: block;
+    }
+    nav .mainMenu li a:hover {
+        background: none;
+        color: blue;
+        font-size: 2rem;
+    }
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+}
